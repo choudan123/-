@@ -240,15 +240,13 @@ if not os.path.exists(LOGS_DIR):
 ALIPAY_CONFIG = {
     'app_id': '9021000156671602',  # 沙箱环境默认应用ID（你可以用自己的）
     'app_private_key': '''-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAiYO2yK/adoQ5vVXkEQL7pyd7Ypw9IJRs0SyWiv93FtZ6NH2OHCVyhtdbV1zXaOZaxz4sWP3h6SSfV86TtPoJYinZ+N4kGR+/xM2q5ZJNHs8ojExkECkxrhBt2XEbP5JoMc3gYPSmGhAAJh0aSB4OKBseiMfax7Ioa5TaN8jBhgyjOS1BUHqNEgSApznbVJfHER4Dsts/rYBSVcQXJYdwEG7iveNRSRsTRTFvwT7ouMTXcr73KLQyHkkLLD+zIKcdH/Za5SWm4pXK0ykfsxsOJlE+b1PrrHrIlWhs43EFw6KMwVqaqvJFpzxDzbRspBOOpZcbehusJkFtWI/RdgzuNQIDAQABAoIBAHWXZnSSvDPguidIDXDmph+4SXB3vmXfxnXQtSNDdajX20SLoTw8YYUhH4DDaYjQgwwiBHZNFCP0JzZE9lYqAmAo/bYs7510Yt5+KQeLZdtUto3SvTZ8o3j/n4/zgqOIJQWB0b/XNTrQN/BfrpvA58Yv+pponJNrq9jjPv+48pQXdYvI4W9TpWoDEHabx90A5l5EJYj4onb0TPASe1FqfJMk4BxBvCN6rjpOkaZK4GQ5MAgOYB9vDLxaza8etDpr4dBEsv+1bQ7zb2J3fFC5RYuo05UyyWWiBI0qWFXAA3A5/cfPt34RuX4Jl/k9c/+8Rlw1vhKq4RPdAopDOgNqKXkCgYEAvZgnHtmgyc85wGtHmkVzRyO26YpzHioAkB3BaHaFWOVC3dau6az3lAWN9jpZ/ouAwgNJNdZJUNa5OT6mV5H0m8QmJy75bAOtv5+7F32XJh2gRcmabrSuOgqbsrHR9BaOrlNyAjeO8wRF/VjBmajRHqMjjAbsv8shB+GvoqQRkkcCgYEAua3brI3U9oP0+bEmp/ap6mlLM6RmXHFZ+P8fi7h5VWxOFzmMWJphfHd7u7j1BLY+dsPD4q2pnb1hvzohLS2LZJthF99RxCyNEzRZPCVyaOJIJfGNPWEjzggySRJGLe7CSx8Mgyfa5Zcd5eUDbYCgLCnTvjAX39Fmn3s3ZNj/XaMCgYA8un/NYegevEHDYJmO0LAcGVR9edtlzg5gGyfYTh5oWwcQB7P/JWgoAZ93PzmUTxrvCh5pIDpbqmup6mddpWK0gh+2bVV3Q7ZjqsZCv/eqPdMYh3rv+u/Tp5I3qr2VcaRCMnhSPXmMXdINVGCu12QkbBz2vUEYLfhmjeO0NNlsAQKBgG7AoD5tnzCnhxEEtM0NGU7kHWIhVpkfV45pBrT9hQoJ/w5lWixjcXCfiGNxsFxuJBYNMSNdeMXI96vrjWx4NSP+dkyZ/RiphkCFQhDZOUQMbQKM8TVCYuv7AZuKVegB+Ux7qaf1tuCpYcEF+CRxy5hsHovb/fGX4sGP6nux36hHAoGBALh9UN7D7RFMLlhcXIpTFnAT6M6uAYlWXq+0WQGXi9y3djrZZcAQE2izJc53zkuIfw936LV/A1N9grdI7qCuug1KYBOg72oByeznbcMzAfhiEXbY8JkWfF/fdTeOnAa/Q7MQSzC+3tGzHOIBsgQ84gV9gKw9bOANDUavJam2wtgx
 -----END RSA PRIVATE KEY-----''',
     'alipay_public_key': '''-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA03r5jngtTI2PRxCtwsO+Kik2oBWEj5R5h1ZwNP6ZxC3CVGh/d5EwRXkFD0+nMJubtIITlr8UnnaujDs+H3iMUi1jc4nelHBm8lSymU0LKI5dAJzJmVbZT9QAuL9Zlrjsq9H8QcTxj4suesvXbxer1L8WRHj3uRvqGlg3BTpEiYHZqjW14zr8BiXsvsk2sjiR7i6RruAW5yGef28ZfFvEvZ3PkZ7Y16vUJWxMvRA93p1HubMtYWkXU4kv+kFaTDw2ljScIMECySjwNDtKqtuCZzIWpLGCpv5i5NdvA7wloU3d2xcsRi1w458QYDPOYDaFwGEaIsJYMttqdWfiq5cXfQIDAQAB
 -----END PUBLIC KEY-----''',
     'sign_type': 'RSA2',
     'debug': True,  # 沙箱环境设为True
     'gateway_url': 'https://openapi-sandbox.dl.alipaydev.com/gateway.do',  # 沙箱网关
-    'notify_url': 'http://b69bfe53.natappfree.cc/api/membership/alipay/notify/',  # 异步通知URL
+    'notify_url': 'your_urls/api/membership/alipay/notify/',  # 异步通知URL
     'return_url': 'http://127.0.0.1:5173/profile?payment=success',  # 同步跳转URL
 
 }
