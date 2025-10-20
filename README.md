@@ -54,7 +54,7 @@
 
 ### 本地开发
 1. 克隆仓库：
-   git clone https://github.com/<OWNER>/<REPO>.git
+   git clone [https://github.com/<OWNER>/<REPO>.git](https://github.com/choudan123/-/tree/backend)
    cd <REPO>
 
 2. 创建并激活虚拟环境：
