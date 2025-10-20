@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.12%2B-blue)]()
 [![Django](https://img.shields.io/badge/django-5.2.5+-green)]()
-[![Djangoframework](https://img.shields.io/badge/djangorestframewor3.16.1-red)]()
+[![Djangoframework](https://img.shields.io/badge/restframework-3.16.1-red)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
 [![CI](https://img.shields.io/badge/ci-GitHub_Actions-blueviolet)]()
 
@@ -26,8 +26,17 @@
 - [联系方式](#联系方式)
 
 ## 简介
-基于本项目采用Django、Doubao-Seedream-4.0、djangorestframework
-在此处写更详细的项目介绍：背景、目标用户、核心模块或功能点（例如用户认证、REST API、管理后台、任务队列等）。
+基于本项目采用Django+djangorestframework框架，搭建users、poster_enums、poster、membership、analytics模块来实现功能。
+
+1.users：提供用户注册、登录、个人信息管理、刷新和校验token（用于保持登录状态）、上传头像视图。
+
+2.membership：提供创建、删除会员套餐，创建订单、获取订单，获取用户会员信息，支付宝沙箱支付、异步通知回调实现订单支付状态变化、同步回调定向到前端页面。
+
+3.poster：提供海报生成（目前只完成了自定义生成模块，完全由用户自己输入提示词），海报生成记录，会员权限判断，上传参考图片接口。
+
+4.poster_enums:提供海报生成需要的提示词枚举包含场景、风格、尺寸等方案，并组合成为提示词。
+
+5.analytics：提供用户行为记录（浏览、选择类型、选择风格、生成、下载），并计算衰减函数，用户能获得更合适的提示词。
 
 ## 特性
 - 基于 Django 的后台管理与 API（DRF）
@@ -40,11 +49,10 @@
 ## 快速开始
 
 ### 前提
-- Python 3.10+
+- Python 3.12+
 - Git
-- 可选：Docker、docker-compose
 
-### 本地开发（推荐）
+### 本地开发
 1. 克隆仓库：
    git clone https://github.com/<OWNER>/<REPO>.git
    cd <REPO>
@@ -56,7 +64,7 @@
    Windows (PowerShell):
    .venv\Scripts\Activate.ps1
 
-3. 安装依赖（如果仓库包含 requirements.txt）：
+3. 安装依赖：
    pip install -r requirements.txt
 
    或者如果使用 pip-tools：
