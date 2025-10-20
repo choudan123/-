@@ -50,21 +50,25 @@
 
 ## 快速开始
 
-### 技术栈
+### 1.技术栈
 - **后端**: Python 3.12, Django 5.2.7，Djangorestframework 3.16.1
 - **数据库**: MySQL, SQLite (可配置)
 
-### 本地开发
-1. 克隆仓库：
-   git clone [https://github.com/<OWNER>/<REPO>.git](https://github.com/choudan123/-/tree/backend)
-   cd <REPO>
+### 2.克隆与安装
 
-2. 创建并激活虚拟环境：
-   python -m venv .venv
-   macOS / Linux:
-   source .venv/bin/activate
-   Windows (PowerShell):
-   .venv\Scripts\Activate.ps1
+```bash
+#克隆项目
+git clone https://github.com/choudan123/AIposter.git
+cd AIposter
+
+#虚拟环境
+conda create -n myenv python=3.12
+conda activate myenv
+
+#安装依赖
+pip install -r requirements.txt
+```
+
 
 3. 安装依赖：
    pip install -r requirements.txt
