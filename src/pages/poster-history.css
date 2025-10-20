@@ -1,0 +1,105 @@
+/* 顶部与导航避让：为页面容器增加“导航高度”的上内边距，避免视觉/点击重叠 */
+:root { --nav-h: 60px; }
+
+.history-page {
+  padding-top: calc(var(--nav-h) + 24px);
+  padding-bottom: 48px;
+}
+
+/* 头部 */
+.history-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.history-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+/* 加载态 */
+.history-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 240px;
+}
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(0,0,0,.1);
+  border-top: 5px solid var(--primary-500);
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 14px; color: var(--text-muted); }
+
+/* 网格 */
+.history-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* 卡片 */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 12px;
+}
+
+.history-card { display: flex; flex-direction: column; gap: 10px; }
+.card-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 4px 2px 0;
+}
+.history-id { font-size: 12px; color: var(--text-muted); }
+.history-status { font-size: 12px; font-weight: 700; }
+.history-status.ok { color: #059669; }
+.history-status.fail { color: #dc2626; }
+
+/* 缩略图 */
+.thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid rgba(0,0,0,.06);
+  cursor: zoom-in;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .28s ease;
+}
+.thumb:hover img { transform: scale(1.02); }
+.thumb.empty { cursor: default; }
+.thumb-empty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.thumb-count-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0,0,0,.65);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}

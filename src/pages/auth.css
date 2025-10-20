@@ -1,0 +1,103 @@
+/* Auth screens (login/register) styled with the global theme tokens */
+@import '../styles/theme.css';
+
+/* Wrapper centers the card */
+.auth-wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, var(--bg-accent), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 24px 24px 16px;
+  box-shadow: var(--shadow-3);
+}
+
+/* Title */
+.auth-title {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+/* Labels and Inputs */
+.auth-label {
+  display: block;
+  margin: 12px 0 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.auth-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.auth-input:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Primary Button */
+.auth-button {
+  margin-top: 18px;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: var(--r-md);
+  background: linear-gradient(90deg, var(--primary-600), var(--primary-500));
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .05s ease, filter var(--transition);
+}
+.auth-button[disabled] {
+  filter: grayscale(35%);
+  cursor: not-allowed;
+}
+.auth-button:active { transform: translateY(1px); }
+
+/* Status messages - 修复颜色问题 */
+.auth-error, .auth-ok {
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  line-height: 1.4;
+  border: 1px solid;
+}
+
+.auth-error {
+  color: #dc2626;  /* 改为深红色，确保可见 */
+  background: #fef2f2;  /* 浅红色背景 */
+  border-color: #fecaca;
+}
+
+.auth-ok {
+  color: #059669;  /* 改为深绿色，确保可见 */
+  background: #ecfdf5;  /* 浅绿色背景 */
+  border-color: #a7f3d0;
+}
+
+/* Footer links */
+.auth-foot {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
