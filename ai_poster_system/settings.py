@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'b69bfe53.natappfree.cc',
+    'your_urls',
     'openapi.alipaydev.com'
 ]
 
