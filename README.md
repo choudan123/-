@@ -139,10 +139,14 @@ ALIPAY_CONFIG = {
 python manage.py runserver
 ```
 
-## 静态文件 & 媒体
-- 收集静态文件（生产环境）：
-  python manage.py collectstatic --noinput
-- 配置静态文件托管（使用 WhiteNoise / Nginx / CDN 等）
+## 静态文件 & 媒体 & 日志
+
+### 创建文件夹
+
+backend/logs
+backend/media
+backend/static
+
 
 
 
