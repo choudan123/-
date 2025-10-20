@@ -1,16 +1,29 @@
-# React + Vite
+# 前端（React + Vite）说明
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/react-18-blue" alt="React" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/vite-5.x-lightgrey" alt="Vite" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/node-18%2B-green" alt="Node" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License" /></a>
+</p>
 
-Currently, two official plugins are available:
+本目录包含前端代码（React + Vite）。该模板已启用 HMR 并带有基础 ESLint 配置，可根据需要启用 `@vitejs/plugin-react`（Babel）或 `@vitejs/plugin-react-swc`（SWC）。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 快速开始（本地开发）
 
-## React Compiler
+### 环境要求
+- Node 22+
+- npm 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 安装依赖
+```bash
+npm install github:https://github.com/choudan123/AIposter.git#frontend
 
-## Expanding the ESLint configuration
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 启动前端
+
+```bash
+npm run dev
+
+```
