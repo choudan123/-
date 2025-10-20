@@ -1,18 +1,22 @@
 # 智能海报生成系统
 
-自定义与快速生成海报
+<p align="center">
+  <b>快速、准确的生成海报</b>
+</p>
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/python-3.12%2B-blue" alt="Python" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/django-5.2.5+-green" alt="Django" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/restframework-3.16.1-red" alt="Djangoframework" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/ci-GitHub_Actions-blueviolet" alt="CI" /></a>
+</p>
 
-[![Python](https://img.shields.io/badge/python-3.12%2B-blue)]()
-[![Django](https://img.shields.io/badge/django-5.2.5+-green)]()
-[![Djangoframework](https://img.shields.io/badge/restframework-3.16.1-red)]()
-[![License](https://img.shields.io/badge/license-MIT-blue)]()
-[![CI](https://img.shields.io/badge/ci-GitHub_Actions-blueviolet)]()
 
 ## 目录
 - [简介](#简介)
-- [特性](#特性)
+- [特性亮点](#特性亮点)
 - [快速开始](#快速开始)
-  - [前提](#前提)
+  - [前提](#技术栈)
   - [本地开发](#本地开发)
 - [配置（.env）](#配置env)
 - [数据库与迁移](#数据库与迁移)
@@ -28,29 +32,27 @@
 ## 简介
 基于本项目采用Django+djangorestframework框架，搭建users、poster_enums、poster、membership、analytics模块来实现功能。
 
-1.users：提供用户注册、登录、个人信息管理、刷新和校验token（用于保持登录状态）、上传头像视图。
+1.**users**：提供用户注册、登录、个人信息管理、刷新和校验token（用于保持登录状态）、上传头像视图。
 
-2.membership：提供创建、删除会员套餐，创建订单、获取订单，获取用户会员信息，支付宝沙箱支付、异步通知回调实现订单支付状态变化、同步回调定向到前端页面。
+2.**membership**：提供创建、删除会员套餐，创建订单、获取订单，获取用户会员信息，支付宝沙箱支付、异步通知回调实现订单支付状态变化、同步回调定向到前端页面。
 
-3.poster：提供海报生成（目前只完成了自定义生成模块，完全由用户自己输入提示词），海报生成记录，会员权限判断，上传参考图片接口。
+3.**poster**：提供海报生成（目前只完成了自定义生成模块，完全由用户自己输入提示词），海报生成记录，会员权限判断，上传参考图片接口。
 
-4.poster_enums:提供海报生成需要的提示词枚举包含场景、风格、尺寸等方案，并组合成为提示词。
+4.**poster_enums**:提供海报生成需要的提示词枚举包含场景、风格、尺寸等方案，并组合成为提示词。
 
-5.analytics：提供用户行为记录（浏览、选择类型、选择风格、生成、下载），并计算衰减函数，用户能获得更合适的提示词。
+5.**analytics**：提供用户行为记录（浏览、选择类型、选择风格、生成、下载），并计算衰减函数，用户能获得更合适的提示词。
 
-## 特性
-- 基于 Django 的后台管理与 API（DRF）
-- 支持 PostgreSQL / MySQL / SQLite（可配置）
-- Docker + docker-compose 配置（可选）
-- 支持环境变量配置（.env）
-- 单元测试 & CI (GitHub Actions)
-- 其它你实现的功能……
+## 特性亮点
+
+- **强大的图像生成功能**：支持多种图像生成模式，文生图、图文生图、单图和组图的生成模式选择。
+- **完善的会员支付**：采用支付宝沙箱模拟支付，易于直接部署生产环境。
+- **智能提示词推荐**：支持应用场景->海报类型->风格的智能推荐。
 
 ## 快速开始
 
-### 前提
-- Python 3.12+
-- Git
+### 技术栈
+- **后端**: Python 3.12, Django 5.2.7，Djangorestframework 3.16.1
+- **数据库**: MySQL, SQLite (可配置)
 
 ### 本地开发
 1. 克隆仓库：
