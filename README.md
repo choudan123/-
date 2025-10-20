@@ -144,8 +144,11 @@ python manage.py runserver
 ### 创建文件夹
 
 backend/logs
+
 backend/media
+
 backend/static
+
 
 
 
