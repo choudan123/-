@@ -99,7 +99,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-### 配置.env
+### 配置密钥
 
 ```bash
 
